@@ -118,13 +118,11 @@ public class InventarioMP extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void SalirExplosionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirExplosionActionPerformed
-        Window w = SwingUtilities.getWindowAncestor(Explosion.this);
-        w.setVisible(false);
+        
     }//GEN-LAST:event_SalirExplosionActionPerformed
 
     private void SalirExplosion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirExplosion1ActionPerformed
-        Window w = SwingUtilities.getWindowAncestor(Explosion.this);
-        w.setVisible(false);
+        
     }//GEN-LAST:event_SalirExplosion1ActionPerformed
 
 

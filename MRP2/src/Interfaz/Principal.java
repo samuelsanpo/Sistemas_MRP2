@@ -173,7 +173,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void MaquinariaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MaquinariaBotonActionPerformed
-    JDialog dialogo = new JDialog(this,"Historial");
+    JDialog dialogo = new JDialog(this,"Maquinaria");
     Maquinaria panel = new Maquinaria();
     dialogo.add(panel);
     dialogo.setVisible(true);
@@ -221,7 +221,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_IPTBotonMouseExited
 
     private void OCompraBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OCompraBotonActionPerformed
-    JDialog dialogo = new JDialog(this,"Historial");
+    JDialog dialogo = new JDialog(this,"Orden de Compra");
     OrdenCompra panel = new OrdenCompra();
     dialogo.add(panel);
     dialogo.setVisible(true);
@@ -229,7 +229,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_OCompraBotonActionPerformed
 
     private void IMPBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IMPBotonActionPerformed
-    JDialog dialogo = new JDialog(this,"Historial");
+    JDialog dialogo = new JDialog(this,"Inventario Materia Prima");
     InventarioMP panel = new InventarioMP();
     dialogo.add(panel);
     dialogo.setVisible(true);
@@ -237,7 +237,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_IMPBotonActionPerformed
 
     private void IPTBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IPTBotonActionPerformed
-    JDialog dialogo = new JDialog(this,"Historial");
+    JDialog dialogo = new JDialog(this,"Inventario Producto Terminado");
     InventarioPT panel = new InventarioPT();
     dialogo.add(panel);
     dialogo.setVisible(true);
