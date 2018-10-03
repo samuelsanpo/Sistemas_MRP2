@@ -5,7 +5,14 @@
  */
 package Interfaz;
 
+import Conexion.Conex;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -18,6 +25,56 @@ public class Maquinaria extends javax.swing.JPanel {
      */
     public Maquinaria() {
         initComponents();
+        
+         try{
+            
+           
+           DefaultTableModel modeloTabla = new DefaultTableModel()  ;
+            tablaMaquina.setModel(modeloTabla);
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            Conex C = new Conex();
+            Connection con = C.connect();
+            
+            
+              String sql ="SELECT nombre_maquina, capacidad_hora, costo_hora, cantidad from inventario_maquinaria" ;
+              ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            
+            ResultSetMetaData  raMd =  rs.getMetaData();
+            int CantidadColumnas = raMd.getColumnCount();
+            
+            modeloTabla.addColumn("Nombre");
+            modeloTabla.addColumn("Capacidad por hora");
+           modeloTabla.addColumn("Costo por hora");
+           modeloTabla.addColumn("Cantidad");
+          
+            
+            
+            while (rs.next()){
+                
+                Object[] filas = new Object[CantidadColumnas];
+                
+                for( int i=0; i <CantidadColumnas; i++){
+                    
+                    filas[i] = rs.getObject(i+1);  
+                }
+                
+                modeloTabla.addRow(filas);
+                
+                
+                System.out.println(filas);
+                
+            }
+                    }
+        
+        
+        catch(SQLException ex){
+            
+            System.err.println(ex.toString());
+            
+        }
     }
 
     /**

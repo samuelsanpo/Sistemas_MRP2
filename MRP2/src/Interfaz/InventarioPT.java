@@ -24,8 +24,7 @@ public class InventarioPT extends javax.swing.JPanel {
      */
     public InventarioPT() {
         initComponents();
-        
-        try{
+         try{
             
            
            DefaultTableModel modeloTabla = new DefaultTableModel()  ;
@@ -36,7 +35,7 @@ public class InventarioPT extends javax.swing.JPanel {
             Connection con = C.connect();
             
             
-              String sql ="SELECT Nombre,Cantidad_disponible,Cantidad_minima Nombre from producto " ;
+              String sql ="SELECT Nombre,Cantidad_disponible from producto " ;
               ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             
@@ -46,7 +45,7 @@ public class InventarioPT extends javax.swing.JPanel {
             
             modeloTabla.addColumn("Nombre");
             modeloTabla.addColumn("Cantidad disponible");
-            modeloTabla.addColumn("Cantidad minima ");
+           
             
             
             
@@ -73,6 +72,7 @@ public class InventarioPT extends javax.swing.JPanel {
             System.err.println(ex.toString());
             
         }
+       
     }
 
     /**

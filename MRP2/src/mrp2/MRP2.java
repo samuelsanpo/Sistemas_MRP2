@@ -2,7 +2,7 @@
 package mrp2;
 
 import Interfaz.Principal;
-
+import Conexion.Conex;
 
 public class MRP2 {
 
@@ -13,6 +13,8 @@ public class MRP2 {
         Principal f = new Principal(); 
         f.setVisible (true); 
         f.setLocationRelativeTo(null);
+        Conex c = new Conex();
+        c.connect();
         
     }
     

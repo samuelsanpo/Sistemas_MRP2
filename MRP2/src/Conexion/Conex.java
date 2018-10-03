@@ -6,7 +6,7 @@ public class Conex {
    
    
  public String driver = "com.mysql.jdbc.Driver";
-String url = "jdbc:mysql://localhost:3306/demanda_mrp1";
+String url = "jdbc:mysql://localhost:3306/mrp2";
 String user = "root";
 String pass = "Online123";
 public Connection connect() {
