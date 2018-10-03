@@ -5,8 +5,15 @@
  */
 package Interfaz;
 
+import Conexion.Conex;
 import java.awt.BorderLayout;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import javax.swing.JDialog;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -20,7 +27,110 @@ public class OrdenCompra extends javax.swing.JPanel {
      */
     public OrdenCompra() {
         initComponents();
+        try{
+            
+           
+           DefaultTableModel modeloTabla = new DefaultTableModel()  ;
+            tablaDemandaOC.setModel(modeloTabla);
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            Conex C = new Conex();
+            Connection con = C.connect();
+            
+            
+              String sql ="SELECT Cantidad_pedida FROM pedido " ;
+              ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            
+            ResultSetMetaData  raMd =  rs.getMetaData();
+            int CantidadColumnas = raMd.getColumnCount();
+            
+            modeloTabla.addColumn("Enero");
+            modeloTabla.addColumn("Febrero");
+            modeloTabla.addColumn("Marzo ");
+            modeloTabla.addColumn("Abril ");
+            modeloTabla.addColumn("Mayo ");
+            modeloTabla.addColumn("Junio ");
+            modeloTabla.addColumn("Julio ");
+            modeloTabla.addColumn("Agosto ");
+            modeloTabla.addColumn("Septiembre ");
+            modeloTabla.addColumn("Octubre ");
+            modeloTabla.addColumn("Noviembre ");
+            modeloTabla.addColumn("Diciembre");
+            
+            while (rs.next()){
+                
+                Object[] filas = new Object[CantidadColumnas];
+                
+                for( int i=0; i <CantidadColumnas; i++){
+                    
+                    filas[i] = rs.getObject(i+1);  
+                }
+                
+                modeloTabla.addRow(filas);
+                
+                
+                System.out.println(filas);
+                
+            }
+                    }
         
+        
+        catch(SQLException ex){
+            
+            System.err.println(ex.toString());
+            
+        }
+        
+        try{
+            
+           
+           DefaultTableModel modeloTabla = new DefaultTableModel()  ;
+            tablaPTOC.setModel(modeloTabla);
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            Conex C = new Conex();
+            Connection con = C.connect();
+            
+            
+              String sql ="SELECT Nombre,Cantidad_disponible,Cantidad_minima Nombre from producto " ;
+              ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            
+            ResultSetMetaData  raMd =  rs.getMetaData();
+            int CantidadColumnas = raMd.getColumnCount();
+            
+            modeloTabla.addColumn("Nombre");
+            modeloTabla.addColumn("Cantidad disponible");
+            modeloTabla.addColumn("Cantidad minima ");
+            
+            
+            
+            while (rs.next()){
+                
+                Object[] filas = new Object[CantidadColumnas];
+                
+                for( int i=0; i <CantidadColumnas; i++){
+                    
+                    filas[i] = rs.getObject(i+1);  
+                }
+                
+                modeloTabla.addRow(filas);
+                
+                
+                System.out.println(filas);
+                
+            }
+                    }
+        
+        
+        catch(SQLException ex){
+            
+            System.err.println(ex.toString());
+            
+        }
         
     }
 

@@ -5,6 +5,14 @@
  */
 package Interfaz;
 
+import Conexion.Conex;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Danielpulido10
@@ -16,6 +24,55 @@ public class InventarioMP extends javax.swing.JPanel {
      */
     public InventarioMP() {
         initComponents();
+        try{
+            
+           
+           DefaultTableModel modeloTabla = new DefaultTableModel()  ;
+            inventarioMP.setModel(modeloTabla);
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            Conex C = new Conex();
+            Connection con = C.connect();
+            
+            
+              String sql ="SELECT Nombre,Cantidad_disponible,Cantidad_minima Nombre from ingredientes " ;
+              ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            
+            ResultSetMetaData  raMd =  rs.getMetaData();
+            int CantidadColumnas = raMd.getColumnCount();
+            
+            modeloTabla.addColumn("Nombre");
+            modeloTabla.addColumn("Cantidad disponible");
+            modeloTabla.addColumn("Cantidad minima ");
+            
+            
+            
+            while (rs.next()){
+                
+                Object[] filas = new Object[CantidadColumnas];
+                
+                for( int i=0; i <CantidadColumnas; i++){
+                    
+                    filas[i] = rs.getObject(i+1);  
+                }
+                
+                modeloTabla.addRow(filas);
+                
+                
+                System.out.println(filas);
+                
+            } 
+                    }
+        
+        
+        catch(SQLException ex){
+            
+            System.err.println(ex.toString());
+            
+        }
+    
     }
 
     /**
