@@ -13,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import javax.swing.JDialog;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -239,7 +240,7 @@ public class OrdenCompra extends javax.swing.JPanel {
             }
         });
 
-        generarOC.setText("Generar OC");
+        generarOC.setText("Generar OP");
         generarOC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 generarOCActionPerformed(evt);
@@ -292,53 +293,46 @@ public class OrdenCompra extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton22)
-                .addGap(148, 148, 148))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(generarOC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE)
-                                .addGap(27, 27, 27))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(218, 218, 218)
-                                .addComponent(generarOC))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(125, 125, 125)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(99, 99, 99)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(37, Short.MAX_VALUE))))
+                        .addGap(420, 420, 420)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                        .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(generarOC)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(generarOC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(8, 8, 8)
-                .addComponent(jButton22)
-                .addGap(22, 22, 22))
+                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(50, 50, 50))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -402,153 +396,351 @@ public class OrdenCompra extends javax.swing.JPanel {
             tablaProduccion.setValueAt("Todos los productos",a, 1);
         }
 
-        for (int j = 2; j <= 4; j++) {
-            for (int i = 0; i < tablaOC.getRowCount(); i++) {
+        
+            for (int i = 0; i < 1; i++) {
 
                 int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
                 String nombre = tablaOC.getValueAt(i, 0).toString();
                 int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
-                int tiempo = producto / capacidadMaMe;
+                int tiempo = producto /1500;
                 int numeroCel = tablaProduccion.getRowCount();
 
-                for (int k = 0; k < numeroCel; k++) {
+                for (int k = 0; k < tiempo; k++) {
                     String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
-                    String celda = tablaProduccion.getValueAt(k, j).toString();
+                    String celda = tablaProduccion.getValueAt(k, 2).toString();
                     if (celda.equals("") && k > 1) {
                         for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k + vc, j);
+                            tablaProduccion.setValueAt(nombre, k + vc, 2);
+                            break;
                         }
-                    } else if (nombreTP.equals("15:00")) {
-                        System.out.println("Cambio de columna");
-                        break;
-                    } else {
-                        for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k, j);
-                        }
-                    }
-                }
-            }
-        }
-        
-        for (int j = 5; j <= 7; j++) {
-            for (int i = 0; i < tablaOC.getRowCount(); i++) {
-
-                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
-                String nombre = tablaOC.getValueAt(i, 0).toString();
-                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(1, 1).toString());
-                int tiempo = producto / capacidadMaMe;
-                int numeroCel = tablaProduccion.getRowCount();
-
-                for (int k = 0; k < numeroCel; k++) {
-                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
-                    String celda = tablaProduccion.getValueAt(k, j).toString();
-                    if (celda.equals("") && k > 1) {
-                        for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k + vc, j);
-                        }
-                    } else if (nombreTP.equals("18:00")) {
-                        System.out.println("Cambio de columna");
-                        break;
-                    } else {
-                        for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k+2, j);
-                        }
-                    }
-                }
-            }
-        }
-        for (int j = 8; j <= 9; j++) {
-            for (int i = 0; i < tablaOC.getRowCount(); i++) {
-
-                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
-                String nombre = tablaOC.getValueAt(i, 0).toString();
-                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(2, 1).toString());
-                int tiempo = producto / capacidadMaMe;
-                int numeroCel = tablaProduccion.getRowCount();
-
-                for (int k = 0; k < numeroCel; k++) {
-                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
-                    String celda = tablaProduccion.getValueAt(k, j).toString();
-                    if (celda.equals("") && k > 1 && (nombre.equals("Coca cola") || nombre.equals("Sprite" ) 
-                            || nombre.equals("Fanta" ) || nombre.equals("Quatro" ) || nombre.equals("Coca cola zero" ))) {
                         
-                        for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k + vc, j);
-                        }
-                    } else if (nombreTP.equals("18:00")) {
-                        System.out.println("Cambio de columna");
-                        break;
                     } else {
                         for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k+5, j);
+                            tablaProduccion.setValueAt(nombre, k, 2);
+                            tablaProduccion.setValueAt(nombre, k+2, 5);
+                            tablaProduccion.setValueAt(nombre, k +4, 8);
+                            tablaProduccion.setValueAt(nombre, k+6, 10);
+                            tablaProduccion.setValueAt(nombre, k+8, 13);
+                            break;
                         }
+                        
                     }
+                    
                 }
             }
-        }
-        for (int j = 10; j <= 12; j++) {
-            for (int i = 0; i < tablaOC.getRowCount(); i++) {
+ 
+         
+        
+            
+            for (int i = 1; i < 2; i++) {
 
                 int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
                 String nombre = tablaOC.getValueAt(i, 0).toString();
-                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(3, 1).toString());
-                int tiempo = producto / capacidadMaMe;
-                int numeroCel = pp.tablaProduccion.getRowCount();
-
-                for (int k = 0; k < numeroCel; k++) {
-                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
-                    String celda = tablaProduccion.getValueAt(k, j).toString();
-                    if (celda.equals("") && k > 1) {
-                        for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k + vc, j);
-                        }
-                    } else if (nombreTP.equals("21:00")) {
-                        System.out.println("Cambio de columna");
-                        break;
-                    } else if (nombre.equals("Agua")) {
-                        for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k+2, j);
-                        }
-                    } else {
-                        for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k+5, j);
-                        }
-                    }
-                }
-            }
-        }
-        for (int j = 10; j <= 12; j++) {
-            for (int i = 0; i < tablaOC.getRowCount(); i++) {
-
-                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
-                String nombre = tablaOC.getValueAt(i, 0).toString();
-                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(4, 1).toString());
-                int tiempo = producto / capacidadMaMe;
+                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
+                int tiempo = producto /3000;
                 int numeroCel = tablaProduccion.getRowCount();
 
-                for (int k = 0; k < numeroCel; k++) {
+                
+                for (int k = 0; k < tiempo; k++) {
                     String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
-                    String celda = tablaProduccion.getValueAt(k, j).toString();
-                    if (celda.equals("") && k > 1) {
+                    String celda = tablaProduccion.getValueAt(0, 3).toString();
+                    if (celda.equals("Cocacola")) {
                         for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k + vc, j);
+                            
+                            tablaProduccion.setValueAt(nombre, k+3, 2);
+                            tablaProduccion.setValueAt(nombre, k+5, 5);
+                            tablaProduccion.setValueAt(nombre, k +7, 8);
+                            tablaProduccion.setValueAt(nombre, k+9, 10);
+                            tablaProduccion.setValueAt(nombre, k+11, 13);
+                            break;
                         }
-                    } else if (nombreTP.equals("23:00")) {
-                        System.out.println("Cambio de columna");
-                        break;
-                    } else if (nombre.equals("Agua")) {
-                        for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k+5, j);
-                        }
+                        
                     } else {
                         for (int vc = 1; vc <= tiempo; vc++) {
-                            tablaProduccion.setValueAt(nombre, k+9, j);
+                            tablaProduccion.setValueAt(nombre, k+3, 2);
+                            tablaProduccion.setValueAt(nombre, k+5, 5);
+                            tablaProduccion.setValueAt(nombre, k +7, 8);
+                            tablaProduccion.setValueAt(nombre, k+9, 10);
+                            tablaProduccion.setValueAt(nombre, k+11, 13);
+                            break;
                         }
+                        
                     }
-                }
+                    
+                
             }
-        }
-       
+                
+            }
+             for (int i = 2; i < 3; i++) {
+
+                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
+                String nombre = tablaOC.getValueAt(i, 0).toString();
+                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
+                int tiempo = producto /2000;
+                int numeroCel = tablaProduccion.getRowCount();
+
+                
+                for (int k = 0; k < tiempo; k++) {
+                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
+                    String celda = tablaProduccion.getValueAt(0, 3).toString();
+                    if (celda.equals("Cocacola")) {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            
+                            tablaProduccion.setValueAt(nombre, k+5, 2);
+                            tablaProduccion.setValueAt(nombre, k+7, 5);
+                            tablaProduccion.setValueAt("CocaZero", k +9, 8);
+                            tablaProduccion.setValueAt(nombre, k+11, 10);
+                            tablaProduccion.setValueAt(nombre, k+13, 13);
+                            break;
+                        }
+                        
+                    } else {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            tablaProduccion.setValueAt(nombre, k+5, 2);
+                            tablaProduccion.setValueAt(nombre, k+7, 5);
+                            tablaProduccion.setValueAt("CocaZero", k +9, 8);
+                            tablaProduccion.setValueAt(nombre, k+11, 10);
+                            tablaProduccion.setValueAt(nombre, k+13, 13);
+                            break;
+                        }
+                        
+                    }
+                    
+                
+            }
+                
+            }
+             for (int i = 3; i < 4; i++) {
+
+                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
+                String nombre = tablaOC.getValueAt(i, 0).toString();
+                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
+                int tiempo = producto /1500;
+                int numeroCel = tablaProduccion.getRowCount();
+
+                
+                for (int k = 0; k < tiempo; k++) {
+                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
+                    String celda = tablaProduccion.getValueAt(0, 3).toString();
+                    if (celda.equals("Cocacola")) {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            
+                            tablaProduccion.setValueAt(nombre, k, 3);
+                            tablaProduccion.setValueAt(nombre, k+2, 6);
+                            tablaProduccion.setValueAt("Sprite", k +4, 9);
+                            tablaProduccion.setValueAt(nombre, k+6, 11);
+                            tablaProduccion.setValueAt(nombre, k+8, 14);
+                            break;
+                        }
+                        
+                    } else {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            tablaProduccion.setValueAt(nombre, k, 3);
+                            tablaProduccion.setValueAt(nombre, k+2, 6);
+                            tablaProduccion.setValueAt("Sprite", k +4, 9);
+                            tablaProduccion.setValueAt(nombre, k+6, 11);
+                            tablaProduccion.setValueAt(nombre, k+8, 14);
+                            break;
+                        }
+                        
+                    }
+                    
+                
+            }
+                
+             }
+             
+             for (int i = 4; i < 5; i++) {
+
+                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
+                String nombre = tablaOC.getValueAt(i, 0).toString();
+                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
+                int tiempo = producto /3000;
+                int numeroCel = tablaProduccion.getRowCount();
+
+                
+                for (int k = 0; k < tiempo; k++) {
+                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
+                    String celda = tablaProduccion.getValueAt(0, 3).toString();
+                    if (celda.equals("Cocacola")) {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            
+                            tablaProduccion.setValueAt(nombre, k+3, 3);
+                            tablaProduccion.setValueAt(nombre, k+5, 6);
+                            tablaProduccion.setValueAt(nombre, k +7, 9);
+                            tablaProduccion.setValueAt(nombre, k+9, 11);
+                            tablaProduccion.setValueAt(nombre, k+11, 14);
+                            break;
+                        }
+                        
+                    } else {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            tablaProduccion.setValueAt(nombre, k + 3, 3);
+                            tablaProduccion.setValueAt(nombre, k+5, 6);
+                            tablaProduccion.setValueAt(nombre, k +7, 9);
+                            tablaProduccion.setValueAt(nombre, k+9, 11);
+                            tablaProduccion.setValueAt(nombre, k+11, 14);
+                            break;
+                        }
+                        
+                    }
+                    
+                
+            }
+                
+            }
+             for (int i = 5; i < 6; i++) {
+
+                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
+                String nombre = tablaOC.getValueAt(i, 0).toString();
+                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
+                int tiempo = producto /3000;
+                int numeroCel = tablaProduccion.getRowCount();
+
+                
+                for (int k = 0; k < tiempo; k++) {
+                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
+                    String celda = tablaProduccion.getValueAt(0, 3).toString();
+                    if (celda.equals("Cocacola")) {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            
+                            tablaProduccion.setValueAt(nombre, k+7, 3);
+                            tablaProduccion.setValueAt(nombre, k+9, 6);
+                            tablaProduccion.setValueAt(nombre, k +10, 9);
+                            tablaProduccion.setValueAt(nombre, k+12, 11);
+                            tablaProduccion.setValueAt(nombre, k+14, 14);
+                            break;
+                        }
+                        
+                    } else {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            tablaProduccion.setValueAt(nombre, k + 7, 3);
+                            tablaProduccion.setValueAt(nombre, k+9, 6);
+                            tablaProduccion.setValueAt(nombre, k +10, 9);
+                            tablaProduccion.setValueAt(nombre, k+12, 11);
+                            tablaProduccion.setValueAt(nombre, k+14, 14);
+                            break;
+                        }
+                        
+                    }
+                    
+                
+            }
+                
+            }
+             for (int i = 6; i < 7; i++) {
+
+                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
+                String nombre = tablaOC.getValueAt(i, 0).toString();
+                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
+                int tiempo = producto /3000;
+                int numeroCel = tablaProduccion.getRowCount();
+
+                
+                for (int k = 0; k < tiempo; k++) {
+                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
+                    String celda = tablaProduccion.getValueAt(0, 3).toString();
+                    if (celda.equals("Cocacola")) {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            
+                            tablaProduccion.setValueAt(nombre, k, 4);
+                            tablaProduccion.setValueAt(nombre, k +4, 7);
+                            tablaProduccion.setValueAt(nombre, k+6, 12);
+                            tablaProduccion.setValueAt(nombre, k+8, 15);
+                            break;
+                        }
+                        
+                    } else {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            tablaProduccion.setValueAt(nombre, k , 4);
+                            tablaProduccion.setValueAt(nombre, k +4, 7);
+                            tablaProduccion.setValueAt(nombre, k+6, 12);
+                            tablaProduccion.setValueAt(nombre, k+8, 15);
+                            break;
+                        }
+                        
+                    }
+                    
+                
+            }
+                
+            }
+             for (int i = 7; i < 8; i++) {
+
+                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
+                String nombre = tablaOC.getValueAt(i, 0).toString();
+                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
+                int tiempo = producto /1600;
+                int numeroCel = tablaProduccion.getRowCount();
+
+                
+                for (int k = 0; k < tiempo; k++) {
+                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
+                    String celda = tablaProduccion.getValueAt(0, 3).toString();
+                    if (celda.equals("Cocacola")) {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            
+                            tablaProduccion.setValueAt(nombre, k+2, 4);
+                            tablaProduccion.setValueAt(nombre, k +6, 7);
+                            tablaProduccion.setValueAt(nombre, k+8, 12);
+                            tablaProduccion.setValueAt(nombre, k+10, 15);
+                            break;
+                        }
+                        
+                    } else {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            tablaProduccion.setValueAt(nombre, k+2 , 4);
+                            tablaProduccion.setValueAt(nombre, k +6, 7);
+                            tablaProduccion.setValueAt(nombre, k+8, 12);
+                            tablaProduccion.setValueAt(nombre, k+10, 15);
+                            break;
+                        }
+                        
+                    }
+                    
+                
+            }
+                
+            }
+             for (int i = 8; i < 9; i++) {
+
+                int producto = Integer.parseInt(tablaOC.getValueAt(i, 2).toString());
+                String nombre = tablaOC.getValueAt(i, 0).toString();
+                int capacidadMaMe = Integer.parseInt(ma.tablaMaquina.getValueAt(0, 1).toString());
+                int tiempo = producto /4500;
+                int numeroCel = tablaProduccion.getRowCount();
+
+                
+                for (int k = 0; k < tiempo; k++) {
+                    String nombreTP = tablaProduccion.getValueAt(k, 0).toString();
+                    String celda = tablaProduccion.getValueAt(0, 3).toString();
+                    if (celda.equals("Cocacola")) {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            
+                            tablaProduccion.setValueAt(nombre, k+5, 4);
+                            tablaProduccion.setValueAt(nombre, k +9, 7);
+                            tablaProduccion.setValueAt(nombre, k+11, 12);
+                            tablaProduccion.setValueAt(nombre, k+13, 15);
+                            break;
+                        }
+                        
+                    } else {
+                        for (int vc = 1; vc <= tiempo; vc++) {
+                            tablaProduccion.setValueAt(nombre, k+5 , 4);
+                            tablaProduccion.setValueAt(nombre, k +9, 7);
+                            tablaProduccion.setValueAt(nombre, k+11, 12);
+                            tablaProduccion.setValueAt(nombre, k+13, 15);
+                            break;
+                        }
+                        
+                    }
+                    
+                
+            }
+                
+            }
+             
+        
     }//GEN-LAST:event_jButton22ActionPerformed
 
 
@@ -565,7 +757,7 @@ public class OrdenCompra extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane21;
     private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JTable tablaDemandaOC;
-    private javax.swing.JTable tablaOC;
+    public javax.swing.JTable tablaOC;
     private javax.swing.JTable tablaPTOC;
     public javax.swing.JTable tablaProduccion;
     // End of variables declaration//GEN-END:variables
